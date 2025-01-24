@@ -12,6 +12,22 @@ Primary author: Lixin Yang (https://github.com/lixiny1)
 
 
 ## Part 1: Creating a New Directory
+1. Open a terminal on your laptop
+2. Create a new blank directory and switch to it:
+```
+mkdir hello-comp423
+cd hello-comp423
+```
+3. Initialize a new Git repository. This will initialize your folder with a new, empty repository!
+```
+git init
+```
+
+## Part 2: Creating a Dev Container
+1. Open up the newly created `hello-comp423` directory in **VS Code**
+2. Press `Ctrl-Shift-P` (or `Cmd-Shift-P` if on Mac) and search for **Dev Containers: Add Dev Container Configuration Files**
+3. Select **Add configuration to workspace** and select **Go** from the dropdown menu. This will add a `devcontainer.json` file to your folder!
+
 
 
 
