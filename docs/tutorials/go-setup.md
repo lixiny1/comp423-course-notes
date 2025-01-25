@@ -1,11 +1,13 @@
 # Setting Up a Dev Container for Go
 Primary author: Lixin Yang (https://github.com/lixiny1)
 
+Reviewer: Ezra Heinberg (https://github.com/ezra45)
+
 ## Prerequisites 
 ### Software Requirements
-* Create a **Github** account and make sure **Git** is installed
-* Install **Visual Studio Code**
-* Install **Docker** and make sure it's running
+* Create a [Github](https://github.com) account and make sure [Git](https://git-scm.com/downloads) is installed
+* Install [Visual Studio Code](https://code.visualstudio.com/download)
+* Install [Docker](https://www.docker.com/) and make sure it's running
 ### Basic Knowledge
 * Make sure to be familiar with **command line basics**! (COMP 211)
 * Some basic understanding of **Go** and its syntax would be useful
@@ -22,10 +24,14 @@ cd hello-comp423
 ``` bash
 git init
 ```
+//You might need to add stuff about creating a remote repo, i'm not totally sure but i did just to be safe
 
 ## Part 2: Creating a Dev Container
+
 1. Open up the newly created `hello-comp423` directory in **VS Code**
+// You might add how to do this
 2. Press `Ctrl-Shift-P` (or `Cmd-Shift-P` if on Mac) and search for **Dev Containers: Add Dev Container Configuration Files**
+// There are more boxes that pop up that might be confusing if you dont clarify what to do 
 3. Select **Add configuration to workspace** and select **Go** from the dropdown menu. This will add a `devcontainer.json` file to your folder!
 
 ## Part 3: Configuring the Dev Container File
@@ -51,6 +57,8 @@ git init
 ```
 !!! note
     Make sure to double check that you are installing the official Go VSCode Plugin! The code above should download the correct version.
+
+// Make sure you mention to reopen in dev container
 
 ## Part 4: Creating Go Module
 1. Open up a terminal in VSCode within the Dev Container and run the following command:
