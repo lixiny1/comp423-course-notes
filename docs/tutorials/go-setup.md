@@ -49,13 +49,42 @@ git init
     "postCreateCommand": "go version"
 }
 ```
+!!! note
+    Make sure to double check that you are installing the official Go VSCode Plugin! The code above should download the correct version.
 
-## Creating Go Module
+## Part 4: Creating Go Module
 1. Open up a terminal in VSCode within the Dev Container and run the following command:
 ```
 go mod init hello-comp423
 ```
 This command sets up the current directory as the root of a new Go module. The `go.mod` file is the center of this module and allows you to modify any dependencies that you may have.
+
+## Part 5: Creating Your First Program!
+1. Within your dev container, create a new directory called **docs**. This is where we will be storing our Go programs.
+```
+mkdir docs
+cd docs
+```
+2. Create a new Go file called **main.go** within the **docs** directory. This file will contain our first Go program!
+```
+touch main.go
+```
+3. Navigate to the **main.go** file. 
+```
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello COMP423")
+}
+```
+* **package main** describes the package your code is in
+
+!!! note
+     The main package in Go is special because it defines the entry point into the program.
+
+* **fmt** is a package that we are instructing to install when this program runs. **fmt** is a standard library package in Go used in **formatting I/O**, such as printing to a console.
 
 
 
