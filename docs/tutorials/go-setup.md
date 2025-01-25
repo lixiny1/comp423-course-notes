@@ -26,8 +26,13 @@ git init
 ## Part 2: Creating a Dev Container
 1. Open up the newly created `hello-comp423` directory in **VS Code**
 2. Press `Ctrl-Shift-P` (or `Cmd-Shift-P` if on Mac) and search for **Dev Containers: Add Dev Container Configuration Files**
-3. Select **Add configuration to workspace** and select **Go** from the dropdown menu. This will add a `devcontainer.json` file to your folder!
+3. Select **Add configuration to workspace** and select **Go** from the dropdown menu. This will add a `devcontainer.json` file to a new `.devcontainer` folder in your workspace!
+4. Look inside your `devcontainer.json` file. There should automatically be a link to a base image under `image`:
 
+```
+"image": "mcr.microsoft.com/devcontainers/go:1-1.23-bookworm"
+```
+If there isn't a link, you can select a base image. For **Go**, use a **Microsoft Provided Image** such as `mcr.microsoft.com/devcontainers/go`
 
 
 
