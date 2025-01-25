@@ -28,6 +28,28 @@ git init
 2. Press `Ctrl-Shift-P` (or `Cmd-Shift-P` if on Mac) and search for **Dev Containers: Add Dev Container Configuration Files**
 3. Select **Add configuration to workspace** and select **Go** from the dropdown menu. This will add a `devcontainer.json` file to your folder!
 
+## Part 3: Configuring the Dev Container File
+1. Take a look at the `devcontainer.json` file.
+    * **"name"** refers to the name of your Dev Container. In this case, the name is **"Go Dev Container"**.
+    * **"image"** refers to the base image from Microsoft with Go installed.
+    * Under **extensions**, we specify for the `golang.go` VSCode plugin to be installed. This will allow us to work with `.go` files within VSCode.
+    * **"postCreateCommand"** will run `go version` and tell you what version of Go is running after you create the container and run this file.
+    * Here is an example of what your `devcontainer.json` file should look like:
+```
+{
+    "name": "Go Dev Container",
+    "image": "mcr.microsoft.com/devcontainers/go:1-bullseye",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "golang.go"
+            ]
+        }
+    },
+    "postCreateCommand": "go version"
+}
+```
+
 
 
 
