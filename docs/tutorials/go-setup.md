@@ -50,6 +50,12 @@ git init
 }
 ```
 
+## Creating Go Module
+1. Open up a terminal in VSCode within the Dev Container and run the following command:
+```
+go mod init hello-comp423
+```
+This command sets up the current directory as the root of a new Go module. The `go.mod` file is the center of this module and allows you to modify any dependencies that you may have.
 
 
 
