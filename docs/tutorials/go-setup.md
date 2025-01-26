@@ -24,13 +24,15 @@ cd hello-comp423
 ``` bash
 git init
 ```
+
+
 4. Create a remote repository in Github (instructions by Kris Jordan)
     * Log into your Github account and go to the **Create a New Repository** page
     * Fill in these details:
         * **Repository Name:** ```go-tutorial```
         * **Description:** "A short program written in Go!"
         * **Visibility:** Public
-
+    * Click the box that adds a README.md file during this stage. You will need it later!
     * Click Create Repository.
 
 5. Link your Local Repository to GitHub
@@ -62,6 +64,7 @@ git push --set-upstream origin main
 1. Open up the newly created `hello-comp423` directory in **VS Code** through File -> Open Folder
 2. Press `Ctrl-Shift-P` (or `Cmd-Shift-P` if on Mac) and search for **Dev Containers: Add Dev Container Configuration Files**
 3. Select **Add configuration to workspace** and select **Go** from the dropdown menu. This will add a `devcontainer.json` file to your folder!
+4. Click **"Reopen in Dev Container"** if the pop up appears on the screen. If not, press `Ctrl-Shift-P` (or `Cmd-Shift-P` if on Mac) and search up **Dev Container: Reopen in Dev Container**
 
 ## Part 3: Configuring the Dev Container File
 1. Take a look at the `devcontainer.json` file.
@@ -147,6 +150,15 @@ Previously, running `go run main.go` simultaneously compiled and executed your p
 
 Now you have an executable file of your first Go program!
 
+6. If you would like to push your changes to your local Github repository, use the following commands:
+``` bash
+git switch main
+git add .
+git commit -m "Completed first Go program!"
+git push
+```
+
+Congratulations! You just created and pushed your first Go program to your repository. Now you can continue learning and coding in Go to do more cool things.
 
 
 
