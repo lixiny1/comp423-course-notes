@@ -24,14 +24,43 @@ cd hello-comp423
 ``` bash
 git init
 ```
-//You might need to add stuff about creating a remote repo, i'm not totally sure but i did just to be safe
+4. Create a remote repository in Github (instructions by Kris Jordan)
+    * Log into your Github account and go to the **Create a New Repository** page
+    * Fill in these details:
+        * **Repository Name:** ```go-tutorial```
+        * **Description:** "A short program written in Go!"
+        * **Visibility:** Public
+
+    * Click Create Repository.
+
+5. Link your Local Repository to GitHub
+
+```shell
+git remote add origin https://github.com/<your-username>/go-tutorial.git
+```
+
+* Replace ```<your-username>``` with your GitHub username.
+
+* Check your default branch name with the subcommand ```git branch```. If it's not ```main```, rename it to ```main``` with the following command: ```git branch -M main```.
+
+* Push your local commits to the GitHub repo:
+
+```shell
+git push --set-upstream origin main
+```
+!!! info
+    What is ```--set-upstream```?
+
+    ```git push --set-upstream origin main``` pushes the main branch to the remote repository origin. The ```--set-upstream``` flag sets up the main branch to track the remote branch, meaning future pushes and pulls can be done without specifying the branch name and just writing ```git push origin``` when working on your local ```main``` branch. The corresponding short flag is ```-u```.
+
+* In your web browser, refresh your GitHub repository to see that the same commit you made locally has now been pushed to remote. You can use ```git log``` locally to see the commit ID and message which should match the ID of the most recent commit on GitHub.
+
+
 
 ## Part 2: Creating a Dev Container
 
-1. Open up the newly created `hello-comp423` directory in **VS Code**
-// You might add how to do this
+1. Open up the newly created `hello-comp423` directory in **VS Code** through File -> Open Folder
 2. Press `Ctrl-Shift-P` (or `Cmd-Shift-P` if on Mac) and search for **Dev Containers: Add Dev Container Configuration Files**
-// There are more boxes that pop up that might be confusing if you dont clarify what to do 
 3. Select **Add configuration to workspace** and select **Go** from the dropdown menu. This will add a `devcontainer.json` file to your folder!
 
 ## Part 3: Configuring the Dev Container File
@@ -58,7 +87,6 @@ git init
 !!! note
     Make sure to double check that you are installing the official Go VSCode Plugin! The code above should download the correct version.
 
-// Make sure you mention to reopen in dev container
 
 ## Part 4: Creating Go Module
 1. Open up a terminal in VSCode within the Dev Container and run the following command:
